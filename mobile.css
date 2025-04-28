@@ -373,6 +373,7 @@
     h1, h2, h3, h4, h5, h6, p, a, a:active, li, ol, sup, abbr, 
     i, b, marquee, form, input, button, span, div {
         -webkit-font-smoothing: antialiased;
+        filter: blur(0) !important;
     }
     
     .hero h1 {
@@ -383,6 +384,7 @@
         margin-top: 1rem;
         width: 100%;
         transform: scaleY(75%);
+        filter: blur(0) !important;
     }
 }
 
