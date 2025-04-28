@@ -188,7 +188,6 @@
         margin: 0.2rem 0;
         letter-spacing: 0.1rem;
         display: block;
-        filter: blur(0.01px);
     }
     
     .corner-glyph {
@@ -373,7 +372,6 @@
     
     h1, h2, h3, h4, h5, h6, p, a, a:active, li, ol, sup, abbr, 
     i, b, marquee, form, input, button, span, div {
-        filter: blur(0.01px);
         -webkit-font-smoothing: antialiased;
     }
     
@@ -381,7 +379,6 @@
         font-size: 1.2rem !important;
         letter-spacing: 0.8rem;
         padding-left: 0.4rem;
-        filter: blur(0.01px);
         -webkit-text-stroke: 0.7px;
         margin-top: 1rem;
         width: 100%;
