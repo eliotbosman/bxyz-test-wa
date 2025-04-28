@@ -1,7 +1,16 @@
+/* Force font loading before any content is displayed */
+@font-face {
+    font-family: 'Eurostile';
+    src: url('fonts/EurostileRegular.woff2') format('woff2');
+    font-weight: normal;
+    font-style: normal;
+    font-display: block; /* Changed from swap to block to prevent FOUT */
+}
+
 /* Mobile-specific styles that won't affect desktop */
 @media screen and (max-width: 767px) {
     html, body {
-        overflow: hidden !important;
+        overflow-y: auto !important; /* Changed from hidden to auto to allow scrolling */
         height: 100% !important;
         min-height: 100vh; /* Fallback */
         min-height: calc(var(--vh, 1vh) * 100);
@@ -9,7 +18,8 @@
         position: relative;
         width: 100%;
         background-color: #000000;
-        -webkit-overflow-scrolling: none;
+        -webkit-overflow-scrolling: touch;
+        font-family: 'Eurostile', 'AUTHENTIC Sans', sans-serif; /* Explicitly set font-family */
     }
     
     body::before {
@@ -28,7 +38,7 @@
     }
     
     main {
-        overflow: hidden !important;
+        overflow-y: auto !important; /* Changed from hidden to auto to allow scrolling */
         max-height: none !important;
         width: 100%;
         max-width: 100%;
@@ -41,7 +51,8 @@
         position: relative;
         z-index: 1;
         align-items: center;
-        -webkit-overflow-scrolling: none;
+        -webkit-overflow-scrolling: touch;
+        padding-bottom: 80px; /* Add padding to ensure footer content is visible */
     }
     
     .hero h1 {
@@ -92,6 +103,9 @@
         align-items: center;
         padding-bottom: 10px;
         margin-top: 0;
+        position: relative;
+        z-index: 100;
+        margin-bottom: 20px; /* Add space below social links */
     }
     
     .content-container {
@@ -170,6 +184,7 @@
     .video-grid, .music-grid, .video-links, .music-links, html, body {
         -ms-overflow-style: none;  /* IE and Edge */
         scrollbar-width: none;  /* Firefox */
+        overflow-y: auto; /* Ensure content is scrollable */
     }
     
     .video-links, .music-links {
@@ -256,9 +271,10 @@
         text-align: center;
         padding: 0.25rem 0 1rem;
         position: relative;
-        z-index: 10;
+        z-index: 100; /* Increased z-index to ensure visibility */
         margin-bottom: env(safe-area-inset-bottom, 10px);
-        margin-top: -0.5rem;
+        margin-top: 1rem; /* Changed from negative to positive margin */
+        pointer-events: auto; /* Ensure links are clickable */
     }
     
     .footer-logo-container {
@@ -304,7 +320,8 @@
         margin-top: 0;
         margin-bottom: 0.25rem;
         position: relative;
-        z-index: 10;
+        z-index: 100; /* Increased z-index to ensure visibility */
+        pointer-events: auto; /* Ensure links are clickable */
     }
     
     .newsletter {
