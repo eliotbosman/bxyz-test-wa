@@ -238,26 +238,18 @@
     /* Make signatures visible on mobile */
     .resurs4-container {
         display: block;
-        right: 0; /* Changed from -1rem to 0 to keep it within bounds */
-        width: 70px; /* Slightly reduced width */
+        right: -1rem;
+        width: 80px;
         height: 200px;
         opacity: 0.4;
-        position: fixed; /* Ensure it stays in place */
-        top: 50%; /* Center vertically */
-        transform: translateY(-50%); /* Center vertically */
-        pointer-events: none; /* Prevent blocking interactions */
     }
     
     .resurs6-container {
         display: block;
-        left: 0; /* Changed from -1rem to 0 to keep it within bounds */
-        width: 70px; /* Slightly reduced width */
+        left: -1rem;
+        width: 80px;
         height: 200px;
         opacity: 0.4;
-        position: fixed; /* Ensure it stays in place */
-        top: 50%; /* Center vertically */
-        transform: translateY(-50%); /* Center vertically */
-        pointer-events: none; /* Prevent blocking interactions */
     }
     
     .resource-container {
