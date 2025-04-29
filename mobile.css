@@ -67,12 +67,12 @@
     
     /* Hide grain overlay on mobile - using body::before instead */
     .grain-overlay {
-        display: none !important;
+        display:block;
     }
     
     /* Hide animated image container on mobile - using body::before instead */
     .animated-image-container {
-        display: none !important;
+        display: block;
     }
     
     .animated-image {
