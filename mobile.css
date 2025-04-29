@@ -24,7 +24,7 @@
     }
 
 
-    /* Subtle scale animation for mobile texture */
+    /* Zoomed-in texture animation for mobile */
     body::before {
         content: '';
         display: block;
@@ -34,35 +34,35 @@
         width: 100vw;
         height: 500vh !important;
         background-image: url('YL-TEXTURE-DESKTOP.jpg');
-        background-size: cover;
+        background-size: 300%;
         background-position: center;
         opacity: 0.4;
         mix-blend-mode: overlay;
         filter: contrast(1) brightness(1.2) grayscale(100);
         pointer-events: none;
         z-index: 5;
-        animation: mobile-grain-animation 12s steps(12) infinite;
-        -webkit-animation: mobile-grain-animation 12s steps(12) infinite;
+        animation: mobile-grain-animation 1.5s steps(6) infinite;
+        -webkit-animation: mobile-grain-animation 1.5s steps(6) infinite;
         will-change: background-size;
         transform: translateZ(0);
     }
     
-    /* Mobile-specific animation with subtle scale changes */
+    /* Mobile-specific animation with 300-350% scale changes */
     @keyframes mobile-grain-animation {
-        0% { background-size: 100%; }
-        25% { background-size: 102%; }
-        50% { background-size: 104%; }
-        75% { background-size: 102%; }
-        100% { background-size: 100%; }
+        0% { background-size: 300%; }
+        25% { background-size: 325%; }
+        50% { background-size: 350%; }
+        75% { background-size: 325%; }
+        100% { background-size: 300%; }
     }
     
     /* Webkit-specific animation for better Safari support */
     @-webkit-keyframes mobile-grain-animation {
-        0% { background-size: 100%; }
-        25% { background-size: 102%; }
-        50% { background-size: 104%; }
-        75% { background-size: 102%; }
-        100% { background-size: 100%; }
+        0% { background-size: 300%; }
+        25% { background-size: 325%; }
+        50% { background-size: 350%; }
+        75% { background-size: 325%; }
+        100% { background-size: 300%; }
     }
     
     /* Hide grain overlay on mobile - using body::before instead */
