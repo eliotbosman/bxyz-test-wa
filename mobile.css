@@ -36,7 +36,7 @@
         background-image: url('YL-TEXTURE-DESKTOP.jpg');
         background-size: 400%;
         background-position: center;
-        opacity: 0.2;
+        opacity: 0.1;
         mix-blend-mode: overlay;
         filter: contrast(1.2) brightness(1.2) grayscale(100);
         pointer-events: none;
