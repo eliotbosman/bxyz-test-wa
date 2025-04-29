@@ -18,7 +18,7 @@
         position: relative;
         width: 100%;
         background-color: #191919;
-        background-size: 300%;
+        background-size: 400%;
         -webkit-overflow-scrolling: touch;
         font-family: 'Eurostile', 'AUTHENTIC Sans', sans-serif; /* Explicitly set font-family */
     }
@@ -32,9 +32,9 @@
         top: 0;
         left: 0;
         width: 100vw;
-        height: 500vh !important;
+        height: 400vh !important;
         background-image: url('YL-TEXTURE-DESKTOP.jpg');
-        background-size: 300%;
+        background-size: 400%;
         background-position: center;
         opacity: 0.4;
         mix-blend-mode: overlay;
@@ -49,20 +49,20 @@
     
     /* Mobile-specific animation with 300-350% scale changes */
     @keyframes mobile-grain-animation {
-        0% { background-size: 300%; }
-        25% { background-size: 325%; }
-        50% { background-size: 350%; }
-        75% { background-size: 325%; }
-        100% { background-size: 300%; }
+        0% { background-size: 400%; }
+        25% { background-size: 425%; }
+        50% { background-size: 415%; }
+        75% { background-size: 410%; }
+        100% { background-size: 425%; }
     }
     
     /* Webkit-specific animation for better Safari support */
     @-webkit-keyframes mobile-grain-animation {
-        0% { background-size: 300%; }
-        25% { background-size: 325%; }
-        50% { background-size: 350%; }
-        75% { background-size: 325%; }
-        100% { background-size: 300%; }
+        0% { background-size: 400%; }
+        25% { background-size: 425%; }
+        50% { background-size: 415%; }
+        75% { background-size: 410%; }
+        100% { background-size: 425%; }
     }
     
     /* Hide grain overlay on mobile - using body::before instead */
