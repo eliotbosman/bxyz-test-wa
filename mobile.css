@@ -41,44 +41,44 @@
         filter: contrast(1.2) brightness(1.2) grayscale(100);
         pointer-events: none;
         z-index: 5;
-        animation: mobile-grain-animation 0.35s steps(12) infinite;
-        -webkit-animation: mobile-grain-animation 0.35s steps(12) infinite;
+        animation: mobile-grain-animation 1s steps(12) infinite;
+        -webkit-animation: mobile-grain-animation 1s steps(12) infinite;
         will-change: background-size;
         transform: translateZ(0);
     }
     
-    /* Mobile-specific animation with scale changes and rotation */
+    /* Mobile-specific animation with scale changes only */
     @keyframes mobile-grain-animation {
-        0% { background-size: 401%; transform: rotate(0deg); }
-        8.33% { background-size: 405%; transform: rotate(1deg); }
-        16.66% { background-size: 410%; transform: rotate(2deg); }
-        25% { background-size: 415%; transform: rotate(1deg); }
-        33.33% { background-size: 418%; transform: rotate(0deg); }
-        41.66% { background-size: 420%; transform: rotate(-1deg); }
-        50% { background-size: 422%; transform: rotate(-2deg); }
-        58.33% { background-size: 419%; transform: rotate(-1deg); }
-        66.66% { background-size: 416%; transform: rotate(0deg); }
-        75% { background-size: 411%; transform: rotate(1deg); }
-        83.33% { background-size: 407%; transform: rotate(2deg); }
-        91.66% { background-size: 404%; transform: rotate(1deg); }
-        100% { background-size: 401%; transform: rotate(0deg); }
+        0% { background-size: 401%; }
+        8.33% { background-size: 405%; }
+        16.66% { background-size: 410%; }
+        25% { background-size: 415%; }
+        33.33% { background-size: 418%; }
+        41.66% { background-size: 420%; }
+        50% { background-size: 422%; }
+        58.33% { background-size: 419%; }
+        66.66% { background-size: 416%; }
+        75% { background-size: 411%; }
+        83.33% { background-size: 407%; }
+        91.66% { background-size: 404%; }
+        100% { background-size: 401%; }
     }
     
     /* Webkit-specific animation for better Safari support */
     @-webkit-keyframes mobile-grain-animation {
-        0% { background-size: 401%; -webkit-transform: rotate(0deg); }
-        8.33% { background-size: 405%; -webkit-transform: rotate(1deg); }
-        16.66% { background-size: 410%; -webkit-transform: rotate(2deg); }
-        25% { background-size: 415%; -webkit-transform: rotate(1deg); }
-        33.33% { background-size: 418%; -webkit-transform: rotate(0deg); }
-        41.66% { background-size: 420%; -webkit-transform: rotate(-1deg); }
-        50% { background-size: 422%; -webkit-transform: rotate(-2deg); }
-        58.33% { background-size: 419%; -webkit-transform: rotate(-1deg); }
-        66.66% { background-size: 416%; -webkit-transform: rotate(0deg); }
-        75% { background-size: 411%; -webkit-transform: rotate(1deg); }
-        83.33% { background-size: 407%; -webkit-transform: rotate(2deg); }
-        91.66% { background-size: 404%; -webkit-transform: rotate(1deg); }
-        100% { background-size: 401%; -webkit-transform: rotate(0deg); }
+        0% { background-size: 401%; }
+        8.33% { background-size: 405%; }
+        16.66% { background-size: 410%; }
+        25% { background-size: 415%; }
+        33.33% { background-size: 418%; }
+        41.66% { background-size: 420%; }
+        50% { background-size: 422%; }
+        58.33% { background-size: 419%; }
+        66.66% { background-size: 416%; }
+        75% { background-size: 411%; }
+        83.33% { background-size: 407%; }
+        91.66% { background-size: 404%; }
+        100% { background-size: 401%; }
     }
     
     /* Hide grain overlay on mobile - using body::before instead */
