@@ -34,15 +34,15 @@
         width: 100vw;
         height: 400vh !important;
         background-image: url('YL-TEXTURE-DESKTOP.jpg');
-        background-size: 400%;
+        background-size: 200%;
         background-position: center;
         opacity: 0.4;
         mix-blend-mode: overlay;
         filter: contrast(1) brightness(1.2) grayscale(100);
         pointer-events: none;
         z-index: 5;
-        animation: mobile-grain-animation 1.5s steps(6) infinite;
-        -webkit-animation: mobile-grain-animation 1.5s steps(6) infinite;
+        animation: mobile-grain-animation 0.75s steps(6) infinite;
+        -webkit-animation: mobile-grain-animation 0.75s steps(6) infinite;
         will-change: background-size;
         transform: translateZ(0);
     }
