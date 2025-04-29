@@ -148,8 +148,8 @@
             <div class="link-row other-links">
                 <a href="#" class="main-link" id="music-link">MUSIC</a>
                 <a href="#" class="main-link" id="videos-link">VIDEOS</a>
-                <a href="https://yungleanlive.com" class="main-link" target="blank">TOUR</a>
-                <a href="https://store.worldaffairs.se" class="main-link" target="blank">STORE</a>
+                <a href="https://yungleanlive.com" class="main-link external-link" data-href="https://yungleanlive.com">TOUR</a>
+                <a href="https://store.worldaffairs.se" class="main-link external-link" data-href="https://store.worldaffairs.se">STORE</a>
             </div>
             <!-- logo-markören flyttad till sidfoten -->
         </section>
@@ -671,6 +671,26 @@
             gsap.set('a, .main-link, .video-link', {
                 opacity: 1,
                 visibility: 'visible'
+            });
+            
+            // Handle external links differently on mobile vs desktop
+            function isMobileDevice() {
+                return (window.innerWidth <= 767 || /Android|webOS|iPhone|iPad|iPod|BlackBerry|IEMobile|Opera Mini/i.test(navigator.userAgent));
+            }
+            
+            // Set up external links
+            document.querySelectorAll('.external-link').forEach(link => {
+                link.addEventListener('click', function(e) {
+                    const url = this.getAttribute('data-href');
+                    if (isMobileDevice()) {
+                        // On mobile, navigate directly to the URL in the same tab
+                        window.location.href = url;
+                        e.preventDefault();
+                    } else {
+                        // On desktop, open in a new tab (default behavior)
+                        this.setAttribute('target', '_blank');
+                    }
+                });
             });
             
             // GSAP fade animation removed per client request
