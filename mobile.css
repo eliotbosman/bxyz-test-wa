@@ -24,7 +24,7 @@
     }
 
 
-    /* Simplified texture approach for mobile */
+    /* Enhanced texture animation for mobile */
     body::before {
         content: '';
         display: block;
@@ -34,18 +34,34 @@
         width: 100vw;
         height: 500vh !important;
         background-image: url('YL-TEXTURE-DESKTOP.jpg');
-        background-size: cover;
+        background-size: 200%;
         background-position: center;
         opacity: 0.4;
         mix-blend-mode: overlay;
         filter: contrast(1) brightness(1.2) grayscale(100);
         pointer-events: none;
         z-index: 5;
+        animation: mobile-grain-animation 0.1s steps(4) infinite;
+        -webkit-animation: mobile-grain-animation 0.1s steps(4) infinite;
+        will-change: background-position;
     }
     
-    /* Remove animation for a more consistent appearance */
-    @keyframes grain-animation {
-        0%, 100% { background-size: cover; }
+    /* Mobile-specific animation with background position changes */
+    @keyframes mobile-grain-animation {
+        0% { background-position: 0% 0%; }
+        25% { background-position: 10% 10%; }
+        50% { background-position: 5% 0%; }
+        75% { background-position: 0% 5%; }
+        100% { background-position: 0% 0%; }
+    }
+    
+    /* Webkit-specific animation for better Safari support */
+    @-webkit-keyframes mobile-grain-animation {
+        0% { background-position: 0% 0%; }
+        25% { background-position: 10% 10%; }
+        50% { background-position: 5% 0%; }
+        75% { background-position: 0% 5%; }
+        100% { background-position: 0% 0%; }
     }
     
     /* Hide grain overlay on mobile - using body::before instead */
